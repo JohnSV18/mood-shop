@@ -21,3 +21,10 @@ body{
     padding: 0.5em;
     text-decoration:none;
 }
+
+nav{
+    background-color: chocolate;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace
+    ;
+}
