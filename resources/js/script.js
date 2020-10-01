@@ -76,7 +76,12 @@ function showItems() {
         
         // {name:'appel', price: 0.99, qty: 3}
         const { name, price, qty } = cart[i]
-        
+        const all_items_button = Array.from(document.querySelectorAll('button'))
+        all_items_button.forEach(elt => elt.addEventListener('click', () => {
+            addItem(elt.getAttribute('id'), elt.getAttribute('data-price'))
+            showItems()
+          }))
+
 
         itemStr += `<li> ${name} $${price} x ${qty} = ${qty * price}</li>`
     }
